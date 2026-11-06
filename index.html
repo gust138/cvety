@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Цветы по карману — магазин цветов в Новосибирске</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--ff);background:var(--bg);color:var(--fg);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+section{padding:96px 0}
+.tag{color:var(--acc);font-size:12px;font-weight:600;letter-spacing:.22em;text-transform:uppercase}
+h2{font-family:var(--fd);font-size:clamp(32px,4.4vw,54px);font-weight:var(--hw,600);line-height:1.08;margin:12px 0 14px;letter-spacing:var(--hls,-.02em)}
+.sub{color:var(--mut);max-width:600px;margin-bottom:44px;font-size:17px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r,20px);padding:28px;transition:.3s}
+.card:hover{transform:translateY(-5px);border-color:var(--acc)}
+.card h3{font-family:var(--fd);font-size:21px;font-weight:600;margin-bottom:8px}
+.card p{color:var(--mut);font-size:15px}
+.stars{color:var(--acc);letter-spacing:3px;margin-bottom:12px}
+.who{margin-top:16px;font-size:13px;color:var(--mut)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 30px;border-radius:var(--br,99px);font-weight:600;font-size:15px;cursor:pointer;border:0;background:var(--acc);color:var(--onacc,#000);transition:.25s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.btn.ghost{background:transparent;color:var(--fg);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--acc)}
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px}
+.gal img{width:100%;height:100%;object-fit:cover;border-radius:var(--r,16px);transition:.4s}
+.gal img:hover{transform:scale(1.02)}
+.gal .w2{grid-column:span 2}
+.tbl{background:var(--card);border:1px solid var(--line);border-radius:var(--r,20px);overflow:hidden}
+.tr{display:grid;grid-template-columns:2fr 1fr 1fr;padding:20px 28px;border-bottom:1px solid var(--line);align-items:center;color:var(--mut)}
+.tr:last-child{border:0}.tr b{color:var(--fg);font-size:18px;font-weight:600}.tr .pr{color:var(--acc);font-weight:700;font-size:20px}
+.tr.h{font-size:12px;letter-spacing:.15em;text-transform:uppercase;background:rgba(127,127,127,.08)}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.fact{padding:26px 22px;border:1px solid var(--line);border-radius:var(--r,18px);background:var(--card)}
+.fact b{display:block;font-family:var(--fd);font-size:42px;font-weight:600;color:var(--acc);line-height:1.1}.fact span{color:var(--mut);font-size:14px}
+.cont{display:grid;grid-template-columns:.85fr 1.15fr;gap:34px}
+.cl div{padding:18px 0;border-bottom:1px solid var(--line)}
+.cl small{display:block;color:var(--mut);font-size:12px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.cl b{font-size:19px;font-weight:500}
+.map{border-radius:var(--r,20px);overflow:hidden;border:1px solid var(--line);min-height:380px}
+.map iframe{width:100%;height:100%;min-height:380px;border:0}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--mut);font-size:14px}
+.fl{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.rise{opacity:0;animation:rise .9s cubic-bezier(.22,1,.36,1) forwards}
+@keyframes rise{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+@media(max-width:900px){.grid3,.grid4,.cont,.facts{grid-template-columns:1fr 1fr}.cont{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.gal{grid-template-columns:1fr 1fr}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;opacity:1!important;transform:none!important}}
+:root{--bg:#050406;--fg:#f7ece6;--mut:#b7a39c;--acc:#ff8fb1;--onacc:#2a0a16;--card:#100b0e;--line:#2a1b22;--ff:Manrope,system-ui,sans-serif;--fd:Antonio,'Arial Narrow',sans-serif;--hw:400;--hls:.005em;--r:22px}
+h2{text-transform:uppercase;font-size:clamp(38px,5.4vw,70px);letter-spacing:.01em}
+.top{position:fixed;left:0;right:0;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:24px 44px}
+.logo{font-size:24px;font-weight:600;letter-spacing:-.02em}
+.top nav{display:flex;align-items:center;gap:40px;font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}.top nav a:not(.pl):hover{opacity:.6}
+.pl{display:inline-flex;align-items:center;height:44px;padding:0 24px;border-radius:99px;background:#f7ece6;color:#1a1013}
+.hero{position:relative;height:100vh;min-height:620px;overflow:hidden;background:radial-gradient(ellipse at 50% 110%,#2a0f1d 0%,#07050a 55%,#000 100%)}
+#cv{position:absolute;inset:0;width:100%;height:100%}
+.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 35%,rgba(0,0,0,.65));pointer-events:none}
+.hc{position:absolute;left:0;right:0;top:50%;transform:translateY(-48%);display:flex;flex-direction:column;align-items:center;text-align:center;z-index:5;padding:0 20px}
+.hc h1{font-family:var(--fd);font-size:clamp(70px,14vw,220px);line-height:.9;font-weight:400;letter-spacing:-.01em;text-transform:uppercase}
+.hc p{margin-top:34px;font-size:20px;line-height:1.35;color:#f2dfd7}
+.go{display:grid;place-items:center;margin-top:30px;width:58px;height:58px;border:1.5px solid #f7ece6;border-radius:50%;transition:.3s}.go:hover{background:#f7ece6;color:#1a1013}.go svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.corner{position:absolute;right:44px;bottom:36px;z-index:5;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#d9c3ba}
+.price{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.price .card{padding:22px;text-align:center}.price b{display:block;font-family:var(--fd);font-size:34px;color:var(--acc);font-weight:400;margin-top:10px}.price h3{font-size:16px;font-family:var(--ff)}
+.sv{display:flex;flex-wrap:wrap;gap:10px}.sv span{padding:10px 20px;border:1px solid var(--line);border-radius:99px;color:var(--mut);font-size:14px}
+.btn{color:#2a0a16}
+.fact b{font-weight:400}
+@media(max-width:900px){.top{padding:18px}.top nav a:not(.pl){display:none}.price{grid-template-columns:1fr 1fr}.corner{display:none}}
+</style></head><body><div class="top"><a href="#" class="logo">Цветы по карману</a><nav><a href="#catalog">Букеты</a><a href="#prices">Цены</a><a href="#reviews">Отзывы</a><a href="#contacts">Контакты</a><a class="pl" href="tel:+79232381020">Заказать</a></nav></div>
+<div class="hero"><canvas id="cv"></canvas><div class="hc"><h1 class="rise">Цветы<br>по карману</h1><p class="rise" style="animation-delay:.25s">Свежие букеты с доставкой по Новосибирску.<br>Бесплатная открытка к каждому букету.</p><a class="go rise" style="animation-delay:.45s" href="#catalog" aria-label="Смотреть букеты"><svg viewBox="0 0 24 24"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a></div><div class="corner">Двигайте мышью — лепестки откликнутся</div></div>
+<section id="catalog"><div class="wrap"><div class="tag">Букеты</div><h2>Собираем с <span style="color:var(--acc)">любовью</span></h2><p class="sub">Реальные фото букетов магазина.</p><div class="gal"><img src="https://avatars.mds.yandex.net/get-altay/5104421/2a000001807e4b74a3a7889c64a7a7cc8d2b/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/18396981/2a0000019a80f2047b4030203ef160b8109a/XXL" alt="Цветы по карману" loading="lazy" class="w2"><img src="https://avatars.mds.yandex.net/get-altay/16264361/2a0000019cc1e15e06104740cd7883e04411/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/19876101/2a0000019cc1e159f102d0b84f76de57c26b/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/18101536/2a0000019cc1e159d93e190dcc73d0c517b0/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/16435010/2a0000019b359688cd1f686f85ddbe5b36f6/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/16130837/2a000001993dade4e39bd6bb94d5378bc39a/XXL" alt="Цветы по карману" loading="lazy" class="w2"><img src="https://avatars.mds.yandex.net/get-altay/18150755/2a0000019dd43a7fc0f8685ad2dab678fc17/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/17695349/2a0000019cc1e15a2920237c3ff4fd5f01ca/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/15283141/2a00000196d8692f14f29cbcf2d4f4128024/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/18144645/2a0000019bff5cf5b132b78d9ac26d19e04b/XXL" alt="Цветы по карману" loading="lazy"><img src="https://avatars.mds.yandex.net/get-altay/19082209/2a0000019cc1e1597177020bb62cdae6fd98/XXL" alt="Цветы по карману" loading="lazy"></div></div></section>
+<section id="prices" style="padding-top:0"><div class="wrap"><div class="tag">Цены</div><h2>Букеты по <span style="color:var(--acc)">акции</span></h2><p class="sub">Позиции из раздела «Акции» на Яндекс Картах. Бесплатная открытка и фото перед доставкой входят в стоимость.</p>
+<div class="price"><div class="card"><h3>Букет цветных хризантем</h3><b>3 990 ₽</b></div><div class="card"><h3>Букет роз и эвкалипта</h3><b>3 990 ₽</b></div><div class="card"><h3>Букет ярких хризантем</h3><b>3 990 ₽</b></div><div class="card"><h3>Букет нежных хризантем</h3><b>3 990 ₽</b></div><div class="card"><h3>Букет ажурных роз</h3><b>3 990 ₽</b></div></div>
+<div class="facts" style="margin-top:22px"><div class="fact"><b>5,0</b><span>рейтинг Яндекс Карт</span></div><div class="fact"><b>99%</b><span>хвалят букеты (313 отзывов)</span></div><div class="fact"><b>100%</b><span>хвалят персонал</span></div><div class="fact"><b>414</b><span>отзывов</span></div></div></div></section>
+<section style="padding-top:0"><div class="wrap"><div class="tag">Услуги</div><h2>Не только <span style="color:var(--acc)">цветы</span></h2><p class="sub">Что ещё можно заказать вместе с букетом.</p><div class="sv"><span>Доставка по Новосибирску</span><span>Самовывоз</span><span>Бесплатная открытка к каждому букету</span><span>Фото букета перед доставкой</span><span>Воздушные шары</span><span>Мягкие игрушки</span><span>Сухоцветы</span><span>Стабилизированные цветы</span><span>Кашпо</span></div></div></section>
+<section id="reviews" style="padding-top:0"><div class="wrap"><div class="tag">Отзывы</div><h2>Нас <span style="color:var(--acc)">хвалят</span></h2><p class="sub">Рейтинг 5,0 по 434 оценкам.</p>
+<div class="grid3"><div class="card"><div class="stars">★★★★★</div><p>«Цветы свежие, аккуратные, выглядят нежно и красиво, как на фото. Букет собрали быстро и со вкусом.»</p><div class="who">Сергей, Яндекс Карты</div></div><div class="card"><div class="stars">★★★★★</div><p>«Помещение оформлено со вкусом. Продавцы внимательные, с лёгкостью помогли выбрать букет.»</p><div class="who">Artem S., Яндекс Карты</div></div><div class="card"><div class="stars">★★★★★</div><p>«Видно, что работают с душой. Обязательно вернусь ещё.»</p><div class="who">Сергей, Яндекс Карты</div></div></div></div></section>
+<section id="contacts" style="padding-top:0"><div class="wrap"><div class="tag">Контакты</div><h2>Как нас <span style="color:var(--acc)">найти</span></h2><p class="sub">Проспект Дзержинского.</p><div class="cont"><div class="cl">
+<div><small>Адрес</small><b>просп. Дзержинского, 34/2, Новосибирск</b></div><div><small>Телефон</small><b><a href="tel:+79232381020">+7 (923) 238-10-20</a></b></div>
+<div style="border:0"><a class="btn" target="_blank" rel="noopener" href="https://yandex.ru/maps/org/tsvety_po_karmanu/17993386871/">Построить маршрут</a></div></div><div class="map"><iframe src="https://yandex.ru/map-widget/v1/?ol=biz&oid=17993386871&z=17" loading="lazy" title="Карта" style="filter:invert(.92) hue-rotate(180deg) saturate(.8)"></iframe></div></div></div></section>
+<footer><div class="wrap fl"><span>© 2026 Цветы по карману</span><span>Новосибирск · просп. Дзержинского, 34/2</span></div></footer><script>const c=document.getElementById('cv'),x=c.getContext('2d');let W,H,D=Math.min(devicePixelRatio||1,2),m={x:-999,y:-999},P=[];
+const cols=['255,143,177','255,196,214','255,236,226','240,90,120','255,170,120'];
+function rs(){W=c.width=c.offsetWidth*D;H=c.height=c.offsetHeight*D;P=[];const n=Math.round(W*H/D/D/5200);for(let i=0;i<n;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:(2+Math.random()*7)*D,c:cols[i%5],ph:Math.random()*6.28,s:.12+Math.random()*.4,ox:0,oy:0})}rs();addEventListener('resize',rs);
+addEventListener('mousemove',e=>{const b=c.getBoundingClientRect();m.x=(e.clientX-b.left)*D;m.y=(e.clientY-b.top)*D});
+let t=0;(function f(){t+=.01;x.fillStyle='rgba(0,0,0,.22)';x.fillRect(0,0,W,H);x.globalCompositeOperation='lighter';
+for(const p of P){p.y-=p.s*D;p.x+=Math.sin(t*2+p.ph)*.35*D;if(p.y<-20){p.y=H+20;p.x=Math.random()*W}
+let dx=p.x+p.ox-m.x,dy=p.y+p.oy-m.y,d=Math.hypot(dx,dy),R=170*D;if(d<R){const k=(1-d/R)*18*D;p.ox+=dx/d*k*.08;p.oy+=dy/d*k*.08}p.ox*=.94;p.oy*=.94;
+const X=p.x+p.ox,Y=p.y+p.oy,glow=d<R?1+(1-d/R)*2.2:1,a=(.35+.25*Math.sin(t*3+p.ph))*glow;
+const g=x.createRadialGradient(X,Y,0,X,Y,p.r*3.2*glow);g.addColorStop(0,'rgba('+p.c+','+Math.min(a,1)+')');g.addColorStop(.4,'rgba('+p.c+','+a*.35+')');g.addColorStop(1,'rgba('+p.c+',0)');x.fillStyle=g;x.beginPath();x.arc(X,Y,p.r*3.2*glow,0,7);x.fill()}
+x.globalCompositeOperation='source-over';requestAnimationFrame(f)})();</script></body></html>
